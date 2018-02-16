@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityValidation", "EntityValidation\EntityValidation.csproj", "{8AE40D40-D00A-4ADB-AE50-11F9005810D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityValidation", "src\EntityValidation\EntityValidation.csproj", "{8AE40D40-D00A-4ADB-AE50-11F9005810D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityValidation.Examples", "EntityValidation.Examples\EntityValidation.Examples.csproj", "{0BEA4862-DA2D-4659-8D51-0BA8BF1A39EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityValidation.Examples", "src\EntityValidation.Examples\EntityValidation.Examples.csproj", "{0BEA4862-DA2D-4659-8D51-0BA8BF1A39EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{549A3464-18DD-4480-9426-FE7D6401BE37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8AE40D40-D00A-4ADB-AE50-11F9005810D2} = {549A3464-18DD-4480-9426-FE7D6401BE37}
+		{0BEA4862-DA2D-4659-8D51-0BA8BF1A39EF} = {549A3464-18DD-4480-9426-FE7D6401BE37}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0372E214-6149-421F-991D-307D2DC24E1B}
