@@ -12,5 +12,8 @@ namespace EntityValidation.Examples
 
         [StrongPassword(true, true, true, 8, "Password must be strong")]
         public string Password { get; set; }
+
+        [CpfCnpj]
+        public string CpfCnpj { get; set; }
     }
 }
