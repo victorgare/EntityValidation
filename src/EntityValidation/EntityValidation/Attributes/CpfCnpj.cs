@@ -3,7 +3,7 @@ using EntityValidation.Interface;
 
 namespace EntityValidation.Attributes
 {
-    public class CpfCnpj : Attribute, IAttribute
+    public sealed class CpfCnpj : Attribute, IAttribute
     {
         #region CONSTANTES
         private int[] _multiplicador1 = new int[] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };

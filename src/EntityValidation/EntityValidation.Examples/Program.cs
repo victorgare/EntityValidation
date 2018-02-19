@@ -7,7 +7,8 @@
             var entity = new Entity
             {
                 Name = "Victor",
-                Password = "!23vDasc@"
+                Password = "!23vDasc@",
+                BetWeen = 1
             };
 
             // if the required property (Name) is fulfill and the password is strong, it will be true

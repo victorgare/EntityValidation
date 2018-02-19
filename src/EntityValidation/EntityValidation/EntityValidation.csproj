@@ -39,6 +39,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\Between.cs" />
     <Compile Include="Attributes\CpfCnpj.cs" />
     <Compile Include="Attributes\Required.cs" />
     <Compile Include="Attributes\StrongPassword.cs" />

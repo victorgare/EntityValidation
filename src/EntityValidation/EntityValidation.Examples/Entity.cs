@@ -15,5 +15,8 @@ namespace EntityValidation.Examples
 
         [CpfCnpj]
         public string CpfCnpj { get; set; }
+
+        [Between(1, 1.5)]
+        public double BetWeen { get; set; }
     }
 }
