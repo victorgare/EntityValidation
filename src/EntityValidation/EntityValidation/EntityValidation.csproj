@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\Between.cs" />
-    <Compile Include="Attributes\CpfCnpj.cs" />
+    <Compile Include="Attributes\Cnpj.cs" />
+    <Compile Include="Attributes\Cpf.cs" />
+    <Compile Include="Attributes\Email.cs" />
     <Compile Include="Attributes\Required.cs" />
     <Compile Include="Attributes\StrongPassword.cs" />
     <Compile Include="Interface\IAttribute.cs" />

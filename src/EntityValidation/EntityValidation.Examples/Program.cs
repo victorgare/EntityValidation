@@ -1,4 +1,6 @@
-﻿namespace EntityValidation.Examples
+﻿using System;
+
+namespace EntityValidation.Examples
 {
     public class Program
     {
@@ -8,7 +10,10 @@
             {
                 Name = "Victor",
                 Password = "!23vDasc@",
-                BetWeen = 1
+                BetWeen = 1,
+                Cnpj = "001",
+                Cpf = "111.222.444-77",
+                Email = "philippe.silva@domain"
             };
 
             // if the required property (Name) is fulfill and the password is strong, it will be true
@@ -17,7 +22,6 @@
             {
                 //do something   
             }
-
         }
 
     }

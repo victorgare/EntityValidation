@@ -1,21 +1,20 @@
 ﻿using System;
+using System.Runtime.Remoting.Messaging;
 using EntityValidation.Interface;
 
 namespace EntityValidation.Attributes
 {
-    public sealed class CpfCnpj : Attribute, IAttribute
+    public sealed class Cpf : Attribute, IAttribute
     {
-        #region CONSTANTES
-        private int[] _multiplicador1 = new int[] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        private int[] _multiplicador2 = new int[] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        #endregion
+        private readonly int[] _multiplicador1 = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+        private readonly int[] _multiplicador2 = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        public CpfCnpj()
+        public Cpf()
         {
             Message = "O {0} não é valido";
         }
 
-        public CpfCnpj(string message)
+        public Cpf(string message)
         {
             Message = message;
         }
@@ -33,17 +32,7 @@ namespace EntityValidation.Attributes
             // remove todos os espacos e caracteres especiais possiveis em uma mascade de CPF/CNPJ
             valor = valor.Trim().Replace(".", "").Replace("-", "").Replace("/", "");
 
-            switch (valor.Length)
-            {
-                case 11:
-                    return IsCpf(valor);
-
-                case 14:
-                    return IsCnpj(valor);
-
-                default:
-                    return false;
-            }
+            return valor.Length == 11 && IsCpf(valor);
         }
 
         private bool IsCpf(string value)
@@ -74,39 +63,6 @@ namespace EntityValidation.Attributes
             resto = resto < 2 ? 0 : 11 - resto;
 
             digito = digito + resto;
-            return value.EndsWith(digito);
-        }
-
-        private bool IsCnpj(string value)
-        {
-            var soma = 0;
-
-            var tempCnpj = value.Substring(0, 12);
-
-            for (var i = 0; i < 12; i++)
-            {
-                soma += int.Parse(tempCnpj[i].ToString()) * _multiplicador1[i];
-            }
-
-            var resto = soma % 11;
-
-            resto = resto < 2 ? 0 : 11 - resto;
-
-            var digito = resto.ToString();
-            tempCnpj = tempCnpj + digito;
-            soma = 0;
-
-            for (var i = 0; i < 13; i++)
-            {
-                soma += int.Parse(tempCnpj[i].ToString()) * _multiplicador2[i];
-            }
-
-            resto = soma % 11;
-
-            resto = resto < 2 ? 0 : 11 - resto;
-
-            digito = digito + resto;
-
             return value.EndsWith(digito);
         }
 

@@ -6,15 +6,14 @@ namespace EntityValidation.Validation
 {
     public class Validate<T>
     {
-
-        public List<string> ErrosList { get; private set; }
+        public List<string> Errors { get; private set; }
 
         public bool IsValid
         {
             get
             {
-                ErrosList = new List<string>();
-                ErrosList.Clear();
+                Errors = new List<string>();
+                Errors.Clear();
 
                 var type = typeof(T);
                 var properties = type.GetProperties();
@@ -46,7 +45,7 @@ namespace EntityValidation.Validation
                                     retorno = false;
                                     var messageValue = (string)attribute.GetType().GetProperty("Message")?.GetValue(attribute) ?? "The message is invalid";
 
-                                    ErrosList.Add(string.Format(messageValue, property.Name));
+                                    Errors.Add(string.Format(messageValue, property.Name));
                                 }
                             }
                         }
