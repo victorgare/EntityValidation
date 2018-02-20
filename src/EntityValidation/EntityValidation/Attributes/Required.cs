@@ -7,7 +7,7 @@ namespace EntityValidation.Attributes
     {
         public Required()
         {
-            Message = "O campo {0} é obrigatório";
+            Message = "The {0} is required";
         }
 
         public Required(string message)

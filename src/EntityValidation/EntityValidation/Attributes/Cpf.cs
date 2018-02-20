@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.Remoting.Messaging;
 using EntityValidation.Interface;
 
 namespace EntityValidation.Attributes
@@ -11,7 +10,7 @@ namespace EntityValidation.Attributes
 
         public Cpf()
         {
-            Message = "O {0} não é valido";
+            Message = "The {0} is invalid";
         }
 
         public Cpf(string message)
@@ -29,7 +28,7 @@ namespace EntityValidation.Attributes
 
             var valor = (string)value;
 
-            // remove todos os espacos e caracteres especiais possiveis em uma mascade de CPF/CNPJ
+            // remove the spaces between the characteres that can contain in a CPF mask
             valor = valor.Trim().Replace(".", "").Replace("-", "").Replace("/", "");
 
             return valor.Length == 11 && IsCpf(valor);

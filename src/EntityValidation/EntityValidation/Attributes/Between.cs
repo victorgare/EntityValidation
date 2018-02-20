@@ -13,7 +13,7 @@ namespace EntityValidation.Attributes
             _minNumber = minNumber;
             _maxNumber = maxNumber;
 
-            Message = "O {0} não etá entre " + _minNumber + " e " + _maxNumber;
+            Message = "The {0} is not between " + _minNumber + " and " + _maxNumber;
         }
 
         public Between(double minNumber, double maxNumber, string message)

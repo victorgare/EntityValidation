@@ -10,7 +10,7 @@ namespace EntityValidation.Attributes
 
         public Cnpj()
         {
-            Message = "O {0} não é valido";
+            Message = "The {0} is invalid";
         }
 
         public Cnpj(string message)
@@ -28,7 +28,7 @@ namespace EntityValidation.Attributes
 
             var valor = (string)value;
 
-            // remove todos os espacos e caracteres especiais possiveis em uma mascade de CPF/CNPJ
+            // remove the spaces between the characteres that can contain in a CNPJ mask
             valor = valor.Trim().Replace(".", "").Replace("-", "").Replace("/", "");
 
             return valor.Length == 11 && IsCnpj(valor);

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EntityValidation.Examples
+﻿namespace EntityValidation.Examples
 {
     public class Program
     {

@@ -8,7 +8,7 @@ namespace EntityValidation.Attributes
     {
         public Email()
         {
-            Message = "O campo {0} não é um E-mail válido";
+            Message = "The field {0} is not a valid Email";
         }
 
         public Email(string message)
