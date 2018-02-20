@@ -8,7 +8,7 @@
             {
                 Name = "Victor",
                 Password = "!23vDasc@",
-                BetWeen = 1,
+                Between = 1,
                 Cnpj = "001",
                 Cpf = "111.222.444-77",
                 Email = "philippe.silva@domain"

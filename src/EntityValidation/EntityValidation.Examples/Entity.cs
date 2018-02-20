@@ -23,6 +23,6 @@ namespace EntityValidation.Examples
         public string Email { get; set; }
 
         [Between(1, 1.5)]
-        public double BetWeen { get; set; }
+        public double Between { get; set; }
     }
 }
