@@ -7,30 +7,32 @@
 
 In your entity, inherit the **Validate** class passing the entity type like in the code below. Then just use the validation anotations available or create your own!
 
+
 ``` csharp
-   namespace EntityValidation.Examples{
-	public class Entity : Validate<Entity>
-	{
-	public int Id { get; set; }
+namespace EntityValidation.Examples
+{
+    public class Entity : Validate<Entity>
+    {
+        public int Id { get; set; }
 
-       [Required]
-       public string Name { get; set; }
+        [Required]
+        public string Name { get; set; }
 
-       [StrongPassword(true, true, true, 8, "Password must be strong")]
-       public string Password { get; set; }
+        [StrongPassword(true, true, true, 8, "Password must be strong")]
+        public string Password { get; set; }
 
-       [Cpf]
-       public string Cpf { get; set; }
+        [Cpf]
+        public string Cpf { get; set; }
 
-       [Cnpj]
-       public string Cnpj { get; set; }
+        [Cnpj]
+        public string Cnpj { get; set; }
 
-       [Email]
-       public string Email { get; set; }
+        [Email]
+        public string Email { get; set; }
 
-       [Between(1, 1.5)]
-       public double Between { get; set; }
-	}
+        [Between(1, 1.5)]
+        public double Between { get; set; }
+    }
 }
 ```
 
