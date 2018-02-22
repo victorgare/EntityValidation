@@ -58,7 +58,7 @@ if (entity.IsValid)
 
 # Create your own Validation
 
-To create your own validation, just create a class and then inherit **Attribute** and **IAttribute**, the code below from the Required validation class can be used as an example. Implementing this two inheritance you will need to implement the Message property and the IsValid method. The IsValid method will be were the magic will happen, where you wil validate and return a bool if the your validation is accomplished. The Message is the error message that will be added in the Errors property automaticaly if the IsValid return false.
+To create your own validation, just create a class and then inherit **Attribute** and **IAttribute**, the code below from the Required validation class can be used as an example. Implementing this two inheritance you will need to implement the Message property and the IsValid method. The IsValid method will be were the magic will happen, where you will validate and return a bool if the your validation is accomplished. The Message is the error message that will be added in the Errors property automaticaly if the IsValid return false.
 
 ```csharp
 using System;
