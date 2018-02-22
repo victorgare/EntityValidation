@@ -11,7 +11,8 @@
                 Between = 1,
                 Cnpj = "001",
                 Cpf = "111.222.444-77",
-                Email = "philippe.silva@domain"
+                Email = "philippe.silva@domain",
+                Id = 1
             };
 
             // if the required property (Name) is fulfill and the password is strong, it will be true

@@ -5,6 +5,7 @@ namespace EntityValidation.Examples
 {
     public class Entity : Validate<Entity>
     {
+        [CustomMethod("Service", "Method")]
         public int Id { get; set; }
 
         [Required]
