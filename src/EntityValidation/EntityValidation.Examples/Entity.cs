@@ -8,7 +8,7 @@ namespace EntityValidation.Examples
         [CustomMethod("Service", "Method")]
         public int Id { get; set; }
 
-        [Required]
+        [Required, MaxLength(50)]
         public string Name { get; set; }
 
         [StrongPassword(true, true, true, 8, "Password must be strong")]
