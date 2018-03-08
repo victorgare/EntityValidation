@@ -45,7 +45,7 @@
     <Compile Include="Attributes\CustomMethod.cs" />
     <Compile Include="Attributes\Email.cs" />
     <Compile Include="Attributes\MaxLength.cs" />
-    <Compile Include="Attributes\Required.cs" />
+    <Compile Include="Attributes\Mandatory.cs" />
     <Compile Include="Attributes\StrongPassword.cs" />
     <Compile Include="Interface\IAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

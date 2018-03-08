@@ -3,14 +3,9 @@ using EntityValidation.Interface;
 
 namespace EntityValidation.Attributes
 {
-    public sealed class Required : Attribute, IAttribute
+    public sealed class Mandatory : Attribute, IAttribute
     {
-        public Required()
-        {
-            Message = "The {0} is required";
-        }
-
-        public Required(string message)
+        public Mandatory(string message = "The {0} is required")
         {
             Message = message;
         }

@@ -15,7 +15,7 @@ namespace EntityValidation.Examples
     {
         public int Id { get; set; }
 
-        [Required]
+        [Mandatory]
         public string Name { get; set; }
 
         [StrongPassword(true, true, true, 8, "Password must be strong")]
@@ -58,7 +58,7 @@ if (entity.IsValid)
 
 # Create your own Validation
 
-To create your own validation, just create a class and then inherit **Attribute** and **IAttribute**, the code below from the Required validation class can be used as an example. Implementing this two inheritance you will need to implement the Message property and the IsValid method. The IsValid method will be were the magic will happen, where you will validate and return a bool if the your validation is accomplished. The Message is the error message that will be added in the Errors property automaticaly if the IsValid return false.
+To create your own validation, just create a class and then inherit **Attribute** and **IAttribute**, the code below from the Mandatory validation class can be used as an example. Implementing this two inheritance you will need to implement the Message property and the IsValid method. The IsValid method will be were the magic will happen, where you will validate and return a bool if the your validation is accomplished. The Message is the error message that will be added in the Errors property automaticaly if the IsValid return false.
 
 ```csharp
 using System;
@@ -66,14 +66,10 @@ using EntityValidation.Interface;
 
 namespace EntityValidation.Attributes
 {
-    public sealed class Required : Attribute, IAttribute
+    public sealed class Mandatory : Attribute, IAttribute
     {
-        public Required()
-        {
-            Message = "The {0} is required";
-        }
 
-        public Required(string message)
+        public Mandatory(string message = "The {0} is required")
         {
             Message = message;
         }
