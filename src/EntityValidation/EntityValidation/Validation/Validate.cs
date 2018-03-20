@@ -43,7 +43,14 @@ namespace EntityValidation.Validation
                                 if (!result)
                                 {
                                     retorno = false;
-                                    var messageValue = (string)attribute.GetType().GetProperty("Message")?.GetValue(attribute) ?? "The message is invalid";
+
+                                    var propertyMessage = attribute.GetType().GetProperty("Message");
+                                    var messageValue = string.Empty;
+                                    if (propertyMessage != null)
+                                    {
+                                        messageValue = (string)propertyMessage.GetValue(attribute) ?? "The message is invalid";
+
+                                    }
 
                                     Errors.Add(string.Format(messageValue, property.Name));
                                 }
