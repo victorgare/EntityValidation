@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EntityValidation</id>
+    <version>$version$</version>
+    <title>Entity Validation</title>
+    <authors>Philippe Silva / Victor Rodrigues</authors>
+    <owners>Philippe Silva / Victor Rodrigues</owners>
+    <licenseUrl>https://github.com/victorgare/EntityValidation/blob/master/README.md</licenseUrl>
+    <projectUrl>https://github.com/victorgare/EntityValidation</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/victorgare/EntityValidation/master/src/EntityValidation/approve.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Entity Validation is a open source project to validate your entities using the existing ones or creating your own!</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright &#x00A9; Microsoft Corporation.  All rights reserved.</copyright>
+    <tags>Entity Entities Validation Validate</tags>
+  </metadata>
+  <files>
+	<file src="EntityValidation\bin\$configuration$\EntityValidation.dll" target="lib\net47\" />
+	<file src="EntityValidation\bin\$configuration$\EntityValidation.dll" target="lib\net46\" />
+	<file src="EntityValidation\bin\$configuration$\EntityValidation.dll" target="lib\net45\" />
+	<file src="EntityValidation\bin\$configuration$\EntityValidation.dll" target="lib\net40\" />
+	<file src="EntityValidation\bin\$configuration$\EntityValidation.dll" target="lib\net35\" />
+	<file src="EntityValidation\bin\$configuration$\EntityValidation.dll" target="lib\net20\" />  
+  </files>
+</package>

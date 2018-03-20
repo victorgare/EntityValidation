@@ -19,12 +19,8 @@ if "%nuget%" == "" (
 mkdir Build
 mkdir Build\lib
 mkdir Build\lib\net47
+mkdir Build\lib\net46
 mkdir Build\lib\net45
-mkdir Build\lib\net45
-mkdir Build\lib\net44
-mkdir Build\lib\net43
-mkdir Build\lib\net42
-mkdir Build\lib\net41
 mkdir Build\lib\net40
 mkdir Build\lib\net35
 mkdir Build\lib\net20
