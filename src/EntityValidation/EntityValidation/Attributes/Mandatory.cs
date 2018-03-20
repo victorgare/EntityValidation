@@ -12,7 +12,7 @@ namespace EntityValidation.Attributes
 
         public string Message
         {
-            get;
+            get; private set;
         }
 
         public bool IsValid(object value)

@@ -18,6 +18,6 @@ namespace EntityValidation.Attributes
             return valor.Length <= _length;
         }
 
-        public string Message { get; }
+        public string Message { get; private set; }
     }
 }

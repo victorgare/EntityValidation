@@ -67,6 +67,6 @@ namespace EntityValidation.Attributes
             return value.EndsWith(digito);
         }
 
-        public string Message { get; }
+        public string Message { get; private set; }
     }
 }

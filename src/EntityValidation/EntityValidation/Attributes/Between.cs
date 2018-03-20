@@ -30,6 +30,6 @@ namespace EntityValidation.Attributes
             return valor >= _minNumber && valor <= _maxNumber;
         }
 
-        public string Message { get; }
+        public string Message { get; private set; }
     }
 }

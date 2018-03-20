@@ -20,7 +20,7 @@ namespace EntityValidation.Attributes
             Message = message;
         }
 
-        public string Message { get; }
+        public string Message { get; private set; }
 
 
         public bool IsValid(object value)

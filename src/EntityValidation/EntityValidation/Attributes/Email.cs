@@ -24,6 +24,6 @@ namespace EntityValidation.Attributes
             return match.Success;
         }
 
-        public string Message { get; }
+        public string Message { get; private set; }
     }
 }
