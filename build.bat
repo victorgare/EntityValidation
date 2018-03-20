@@ -27,3 +27,5 @@ mkdir Build\lib\net20
 
 
 %nuget% pack "src\EntityValidation\EntityValidation.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
+
+IF %ERRORLEVEL% NEQ 0 

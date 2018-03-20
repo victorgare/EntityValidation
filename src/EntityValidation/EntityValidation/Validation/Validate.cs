@@ -29,7 +29,7 @@ namespace EntityValidation.Validation
                         {
                             var attributeType = attribute.GetType();
 
-                            var classInstane = attributeType.GetMethod($"IsValid");
+                            var classInstane = attributeType.GetMethod("IsValid");
 
                             if (classInstane != null)
                             {
