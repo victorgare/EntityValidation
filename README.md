@@ -4,7 +4,7 @@
 [Victor Rodrigues](https://github.com/victorgare)  
 
 # Status
-[![entity-validation MyGet Build Status](https://www.myget.org/BuildSource/Badge/entity-validation?identifier=8e5d0a8d-5b73-43dc-8e7d-ef74a1de0a10)](https://www.myget.org/)
+[![Build status](https://ci.appveyor.com/api/projects/status/vqoqtkhu3hg1aw4f?svg=true)](https://ci.appveyor.com/project/victorgare/entityvalidation)
 
 # How to use
 
