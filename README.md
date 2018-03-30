@@ -3,6 +3,9 @@
 [Philippe Silva](https://github.com/philippesilva)  
 [Victor Rodrigues](https://github.com/victorgare)  
 
+# Status
+[![entity-validation MyGet Build Status](https://www.myget.org/BuildSource/Badge/entity-validation?identifier=8e5d0a8d-5b73-43dc-8e7d-ef74a1de0a10)](https://www.myget.org/)
+
 # How to use
 
 In your entity, inherit the **Validate** class passing the entity type like in the code below. Then just use the validation anotations available or create your own!
