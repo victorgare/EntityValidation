@@ -31,7 +31,7 @@ namespace EntityValidation.Attributes
             // remove the spaces between the characteres that can contain in a CNPJ mask
             valor = valor.Trim().Replace(".", "").Replace("-", "").Replace("/", "");
 
-            return valor.Length == 11 && IsCnpj(valor);
+            return valor.Length == 14 && IsCnpj(valor);
         }
 
         private bool IsCnpj(string value)
