@@ -5,8 +5,8 @@ namespace EntityValidation.Attributes
 {
     public sealed class Cpf : Attribute, IAttribute
     {
-        private readonly int[] _multiplicador1 = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        private readonly int[] _multiplicador2 = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+        private readonly int[] _multiplicador1 = { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+        private readonly int[] _multiplicador2 = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
         public Cpf()
         {
